@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Xoom - Video Calling App
+
+Xoom is a video calling application built with Next.js, Clerk for authentication, and Stream for video functionality. This project aims to provide a seamless video calling experience with features like personal meeting rooms, recordings, and previous calls.
+
+## Features
+
+- **Personal Meeting Room**: Create and join personal meeting rooms.
+- **Recordings**: Access and manage your call recordings.
+- **Previous Calls**: View a list of your previous calls.
+- **Authentication**: Secure authentication using Clerk.
+- **Responsive Design**: Optimized for various screen sizes.
+
+## Technologies Used
+
+- **Next.js**: React framework for server-side rendering and static site generation.
+- **Clerk**: Authentication and user management.
+- **Stream**: Video calling functionality.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/xoom.git
+   cd xoom
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add the following variables:
+   ```env
+   NEXT_PUBLIC_CLERK_FRONTEND_API=<your-clerk-frontend-api>
+   NEXT_PUBLIC_STREAM_API_KEY=<your-stream-api-key>
+   NEXT_PUBLIC_BASE_URL=http://localhost:3000
+   ```
+
+### Running the App
+
+Start the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/`: Contains the main application components and pages.
+- `components/`: Reusable UI components.
+- `hooks/`: Custom hooks for various functionalities.
+- `providers/`: Context providers for managing state and side effects.
+- `public/`: Static assets like images and icons.
+- `styles/`: Global and component-specific styles.
 
-## Learn More
+## Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `dev`: Runs the app in development mode.
+- `build`: Builds the app for production.
+- `start`: Starts the production server.
+- `lint`: Runs ESLint to check for code quality issues.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features and Functionalities
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Personal Meeting Room
 
-## Deploy on Vercel
+- **Description**: Users can create and join their personal meeting rooms.
+- **Usage**: Navigate to the "Personal Room" page, and click "Start Meeting" to create a new meeting room. You can also copy the invitation link to share with others.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Recordings
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Description**: Users can access and manage their call recordings.
+- **Usage**: Navigate to the "Recordings" page to view a list of your recorded calls.
+
+### Previous Calls
+
+- **Description**: Users can view a list of their previous calls.
+- **Usage**: Navigate to the "Previous" page to see a history of your ended calls.
+
+### Authentication
+
+- **Description**: Secure authentication using Clerk.
+- **Usage**: Users can sign up or sign in using the provided authentication pages.
+
+### Responsive Design
+
+- **Description**: The application is optimized for various screen sizes.
+- **Usage**: The app will automatically adjust its layout based on the screen size.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
